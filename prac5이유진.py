@@ -2,17 +2,19 @@
 
 class Zoo:
     def __init__(self):
-        pass
+        self.dict = {}
 
     def add_animal(self, animal):
-        pass
+        self.dict[animal.name]= animal.species
 
     def show_animals(self):
-        pass
+        for i in self.dict:
+            print(f"{i} the {self.dict[i]}" )
 
 class Animal:
     def __init__(self, name, species):
-        pass
+        self.name = name
+        self.species = species
 
 def main():
     # 동물원을 선언하고 10마리의 동물들을 추가합니다.
@@ -31,6 +33,7 @@ def main():
     # 동물원에 있는 모든 동물을 출력합니다.
     zoo.show_animals()
     ## 출력 결과 : 
+
     '''
     현재 동물원에는 다음 동물들이 있습니다 :
     - Leo the Lion
